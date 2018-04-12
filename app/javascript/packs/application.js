@@ -10,3 +10,4 @@
 console.log('Hello World from Webpacker')
 
 import './hello_react'
+import '../stylesheets/application'
