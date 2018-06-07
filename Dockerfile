@@ -8,6 +8,9 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get install -y nodejs
 RUN apt-get update && apt-get install -y yarn
 
+# install foreman to system because conflict thor version
+RUN gem install foreman
+
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
