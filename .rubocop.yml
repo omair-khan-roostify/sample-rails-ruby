@@ -11,3 +11,17 @@ Rails:
   Enabled: true
 
 require: rubocop-rspec
+
+Metrics/LineLength:
+  Max: 120
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - bin/setup
+    - bin/update

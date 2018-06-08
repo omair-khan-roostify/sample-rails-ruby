@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Article < ApplicationRecord
-    def has_title()
-        self.title.present?
-    end
+  def title?
+    title.present?
+  end
 end
