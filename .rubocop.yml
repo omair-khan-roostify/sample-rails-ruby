@@ -1,0 +1,13 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - vendor/**/*
+    - node_modules/**/*
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+
+Rails:
+  Enabled: true
+
+require: rubocop-rspec
