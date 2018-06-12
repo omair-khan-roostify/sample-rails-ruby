@@ -62,6 +62,7 @@ group :test do
   gem 'danger-rails_best_practices'
   gem 'danger-reek'
   gem 'danger-rubocop'
+  gem 'rspec_junit_formatter'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
