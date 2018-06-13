@@ -58,11 +58,13 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 
-  gem 'danger'
-  gem 'danger-rails_best_practices'
-  gem 'danger-reek'
-  gem 'danger-rubocop'
-  gem 'rspec_junit_formatter'
+  gem 'danger', require: false
+  gem 'danger-checkstyle_format', require: false
+  gem 'danger-rails_best_practices', require: false
+  gem 'danger-reek', require: false
+  gem 'danger-rubocop', require: false
+  gem 'rspec_junit_formatter', require: false
+  gem 'rubocop-checkstyle_formatter', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
