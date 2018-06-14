@@ -31,4 +31,9 @@ SCRIPT
 checkstyle_format.report "#{lint_output_path}/rails_best_practices.xml"
 
 ## reek
-reek.lint
+system(<<~SCRIPT)
+  reek \
+  --format xml \
+  > #{lint_output_path}/reek.xml
+SCRIPT
+checkstyle_format.report "#{lint_output_path}/reek.xml"

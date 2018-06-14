@@ -60,9 +60,6 @@ group :test do
 
   gem 'danger', require: false
   gem 'danger-checkstyle_format', require: false
-  gem 'danger-rails_best_practices', require: false
-  gem 'danger-reek', require: false
-  gem 'danger-rubocop', require: false
   gem 'rspec_junit_formatter', require: false
   gem 'rubocop-checkstyle_formatter', require: false
 end
