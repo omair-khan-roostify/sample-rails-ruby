@@ -10,8 +10,10 @@ warn('Big PR') if git.lines_of_code > 300
 
 # Lint
 lint_output_path = ENV['LINT_OUTPUT'] || 'lint_output'
+FileUtils.mkdir_p lint_output_path
 checkstyle_format.base_path = Dir.pwd
 
+## Rubocop
 system(<<~SCRIPT)
   bundle exec rubocop \
   --require rubocop/formatter/checkstyle_formatter \
@@ -20,5 +22,13 @@ system(<<~SCRIPT)
 SCRIPT
 checkstyle_format.report "#{lint_output_path}/rubocop.xml"
 
-rails_best_practices.lint
+## Rails Best Practices
+system(<<~SCRIPT)
+  bundle exec rails_best_practices . \
+  --format xml \
+  --output-file #{lint_output_path}/rails_best_practices.xml
+SCRIPT
+checkstyle_format.report "#{lint_output_path}/rails_best_practices.xml"
+
+## reek
 reek.lint
