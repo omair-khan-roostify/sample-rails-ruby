@@ -48,7 +48,7 @@ checkstyle_format.report "#{lint_output_path}/eslint.xml"
 
 ## stylelint
 system(<<~SCRIPT)
-  ./bin/yarn lint:css \
+  ./bin/yarn --silent lint:css \
   --custom-formatter=node_modules/stylelint-checkstyle-formatter \
   > #{lint_output_path}/stylelint.xml
 SCRIPT
