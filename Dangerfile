@@ -37,3 +37,19 @@ system(<<~SCRIPT)
   > #{lint_output_path}/reek.xml
 SCRIPT
 checkstyle_format.report "#{lint_output_path}/reek.xml"
+
+## ESLint
+system(<<~SCRIPT)
+  ./bin/yarn lint:js \
+  --format checkstyle \
+  --output-file #{lint_output_path}/eslint.xml
+SCRIPT
+checkstyle_format.report "#{lint_output_path}/eslint.xml"
+
+## stylelint
+system(<<~SCRIPT)
+  ./bin/yarn lint:css \
+  --custom-formatter=node_modules/stylelint-checkstyle-formatter \
+  > #{lint_output_path}/stylelint.xml
+SCRIPT
+checkstyle_format.report "#{lint_output_path}/stylelint.xml"
