@@ -18,8 +18,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'simplecov', require: false, group: :test
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -34,6 +32,8 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 
   gem 'rspec-rails', '~> 3.7'
+
+  gem 'simplecov', require: false
 end
 
 group :development do
