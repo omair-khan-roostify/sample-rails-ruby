@@ -14,7 +14,7 @@ references:
       environment:
         POSTGRES_DB: myapp_test
         POSTGRES_USER: postgres
-        POSTGRES_PASSWORD: ""
+        POSTGRES_PASSWORD: "" 
 version: 2
 jobs:
   build:
