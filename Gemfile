@@ -33,7 +33,7 @@ group :development, :test do
 
   gem 'rspec-rails', '~> 3.7'
 
-  gem 'simplecov', require: false
+  gem 'simplecov'
 end
 
 group :development do
